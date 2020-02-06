@@ -10,7 +10,7 @@ public class Rectangle {
     public Rectangle(double width, double length){
         this.width=width;
         this.length=length;
-        System.out.println("New Rectangle: " + width + " by " + length);
+        System.out.println("New Rectangle: " + this.width + " by " + this.length);
     }
     
     public double getWidth(){
@@ -31,7 +31,9 @@ public class Rectangle {
    
     @Override
     public String toString(){
-        return ("Rectangle of " + this.width + " by " + this.length);
+        Measurement w = new Measurement(this.width,"feet");
+        Measurement l = new Measurement(this.length,"feet");
+        return ("Rectangle of " + w + " by " + l);
     }
     
 }

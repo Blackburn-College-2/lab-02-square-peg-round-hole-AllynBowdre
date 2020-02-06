@@ -9,13 +9,14 @@ public class Square extends Rectangle{
     
     public Square(double side){
         super(side,side);
-        this.side=side;
+        this.side=side;       
         System.out.println("New Square: " + side);
     }
     
     @Override
     public String toString(){
-        return ("Square of " + this.side);
+        Measurement s = new Measurement(side,"feet");
+        return ("Square of " + s);
     }
     
     
